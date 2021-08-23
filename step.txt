@@ -1,0 +1,38 @@
+304CEM( Web API Development )
+Cheung Shun Ying_207370234
+
+node server.js
+
+http://127.0.0.1:9999/index
+
+
+creat account:
+ubch@toy.com
+ubch
+9&10
+
+
+edwina@yahoo.com
+edwina
+2 3 4 5
+
+Login:
+
+
+Save favourite List
+
+
+Load the favourite List and delete the items
+
+
+
+API:
+
+1.Google Rcaptcha-protects your website from fraud
+https://www.google.com/recaptcha/about/
+
+2.Visual Crossing-FORECAST & HISTORICAL WEATHER DATA
+https://www.visualcrossing.com/
+
+3.Currency Converter Api-Convert one currency to another that returns result in json format.
+https://free.currencyconverterapi.com

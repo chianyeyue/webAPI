@@ -1,0 +1,1036 @@
+<html>
+<head>
+<title></title>
+<!-- Apply styles to html elements -->
+<style>
+*{
+margin:0; padding:0; boxsizing:border-box;
+}
+header{
+width: 100%; height: 100vh;
+background-color: white;
+background-repeat: no-repeat;
+background-size: cover;
+}
+nav{
+width: 100%; height: 15vh;
+background: black;
+display: flex; justify-content: space-between;
+align-items: center;
+}
+nav .mainmenu{
+color: white;
+width: 40%;
+display: flex; justify-content: space-around;
+}
+main{
+width: 100%; height: 85vh;
+display: flex; justify-content: center;
+align-items: center;
+text-align: center;
+}
+section h3{
+letter-spacing: 3px; font-weight: 200;
+}
+section h1{
+text-transform: uppercase;
+}
+section div{
+animation:changeborder 10s infinite linear;
+border: 7px solid red;
+}
+@keyframes changeborder{
+0%
+20%
+40%
+}
+</style>
+</head>
+<body>
+<!--Let us create a simple menu using the navigation tags-->
+<!--Use header to indicate that manu will be a part of header -->
+<header>
+<nav>
+<div class = "logo"> <a href="/index" style="color:white;font-size:30px;">Computer Shop</a></div>
+<!--Lets define the menu items now-->
+<div class = "mainmenu">
+<a >Home</a>
+<a >About Us</a>
+<a >Contact Us</a>
+<a id="userLogin" class="userLogin" href="/login">Login</a>
+<a id="userLogout" class="userLogout">username</a>
+<a id="myFav" class="myFav" href="/myFavourList">Favourite List</a>
+<button id="logoutBTN" onclick="Logout()">Logout</button>
+</div>
+</nav>
+<!--Let us create the main section now, if you are not using html5, use div tags-->
+<div class="row" align="center">
+
+<div class="medium-6 columns">
+  <div class="row collapse">
+    <div class="medium-3 columns">
+      <input type="text" value="1" name="CURR_FR_VAL" id="CURR_FR_VAL" placeholder="Enter amount" />
+    </div>
+    <div class="medium-3 columns">
+      <select id="CURR_FR" class="postfix">
+        
+        <option value="AED" >AED</option>
+        
+        <option value="AFN" >AFN</option>
+        
+        <option value="ALL" >ALL</option>
+        
+        <option value="AMD" >AMD</option>
+        
+        <option value="ANG" >ANG</option>
+        
+        <option value="AOA" >AOA</option>
+        
+        <option value="ARS" >ARS</option>
+        
+        <option value="AUD" >AUD</option>
+        
+        <option value="AWG" >AWG</option>
+        
+        <option value="AZN" >AZN</option>
+        
+        <option value="BAM" >BAM</option>
+        
+        <option value="BBD" >BBD</option>
+        
+        <option value="BDT" >BDT</option>
+        
+        <option value="BGN" >BGN</option>
+        
+        <option value="BHD" >BHD</option>
+        
+        <option value="BIF" >BIF</option>
+        
+        <option value="BMD" >BMD</option>
+        
+        <option value="BND" >BND</option>
+        
+        <option value="BOB" >BOB</option>
+        
+        <option value="BRL" >BRL</option>
+        
+        <option value="BSD" >BSD</option>
+        
+        <option value="BTC" >BTC</option>
+        
+        <option value="BTN" >BTN</option>
+        
+        <option value="BWP" >BWP</option>
+        
+        <option value="BYN" >BYN</option>
+        
+        <option value="BYR" >BYR</option>
+        
+        <option value="BZD" >BZD</option>
+        
+        <option value="CAD" >CAD</option>
+        
+        <option value="CDF" >CDF</option>
+        
+        <option value="CHF" >CHF</option>
+        
+        <option value="CLF" >CLF</option>
+        
+        <option value="CLP" >CLP</option>
+        
+        <option value="CNY" >CNY</option>
+        
+        <option value="COP" >COP</option>
+        
+        <option value="CRC" >CRC</option>
+        
+        <option value="CUC" >CUC</option>
+        
+        <option value="CUP" >CUP</option>
+        
+        <option value="CVE" >CVE</option>
+        
+        <option value="CZK" >CZK</option>
+        
+        <option value="DJF" >DJF</option>
+        
+        <option value="DKK" >DKK</option>
+        
+        <option value="DOP" >DOP</option>
+        
+        <option value="DZD" >DZD</option>
+        
+        <option value="EGP" >EGP</option>
+        
+        <option value="ERN" >ERN</option>
+        
+        <option value="ETB" >ETB</option>
+        
+        <option value="EUR" >EUR</option>
+        
+        <option value="FJD" >FJD</option>
+        
+        <option value="FKP" >FKP</option>
+        
+        <option value="GBP" >GBP</option>
+        
+        <option value="GEL" >GEL</option>
+        
+        <option value="GGP" >GGP</option>
+        
+        <option value="GHS" >GHS</option>
+        
+        <option value="GIP" >GIP</option>
+        
+        <option value="GMD" >GMD</option>
+        
+        <option value="GNF" >GNF</option>
+        
+        <option value="GTQ" >GTQ</option>
+        
+        <option value="GYD" >GYD</option>
+        
+        <option value="HKD" selected>HKD</option>
+        
+        <option value="HNL" >HNL</option>
+        
+        <option value="HRK" >HRK</option>
+        
+        <option value="HTG" >HTG</option>
+        
+        <option value="HUF" >HUF</option>
+        
+        <option value="IDR" >IDR</option>
+        
+        <option value="ILS" >ILS</option>
+        
+        <option value="IMP" >IMP</option>
+        
+        <option value="INR" >INR</option>
+        
+        <option value="IQD" >IQD</option>
+        
+        <option value="IRR" >IRR</option>
+        
+        <option value="ISK" >ISK</option>
+        
+        <option value="JEP" >JEP</option>
+        
+        <option value="JMD" >JMD</option>
+        
+        <option value="JOD" >JOD</option>
+        
+        <option value="JPY" >JPY</option>
+        
+        <option value="KES" >KES</option>
+        
+        <option value="KGS" >KGS</option>
+        
+        <option value="KHR" >KHR</option>
+        
+        <option value="KMF" >KMF</option>
+        
+        <option value="KPW" >KPW</option>
+        
+        <option value="KRW" >KRW</option>
+        
+        <option value="KWD" >KWD</option>
+        
+        <option value="KYD" >KYD</option>
+        
+        <option value="KZT" >KZT</option>
+        
+        <option value="LAK" >LAK</option>
+        
+        <option value="LBP" >LBP</option>
+        
+        <option value="LKR" >LKR</option>
+        
+        <option value="LRD" >LRD</option>
+        
+        <option value="LSL" >LSL</option>
+        
+        <option value="LVL" >LVL</option>
+        
+        <option value="LYD" >LYD</option>
+        
+        <option value="MAD" >MAD</option>
+        
+        <option value="MDL" >MDL</option>
+        
+        <option value="MGA" >MGA</option>
+        
+        <option value="MKD" >MKD</option>
+        
+        <option value="MMK" >MMK</option>
+        
+        <option value="MNT" >MNT</option>
+        
+        <option value="MOP" >MOP</option>
+        
+        <option value="MRO" >MRO</option>
+        
+        <option value="MUR" >MUR</option>
+        
+        <option value="MVR" >MVR</option>
+        
+        <option value="MWK" >MWK</option>
+        
+        <option value="MXN" >MXN</option>
+        
+        <option value="MYR" >MYR</option>
+        
+        <option value="MZN" >MZN</option>
+        
+        <option value="NAD" >NAD</option>
+        
+        <option value="NGN" >NGN</option>
+        
+        <option value="NIO" >NIO</option>
+        
+        <option value="NOK" >NOK</option>
+        
+        <option value="NPR" >NPR</option>
+        
+        <option value="NZD" >NZD</option>
+        
+        <option value="OMR" >OMR</option>
+        
+        <option value="PAB" >PAB</option>
+        
+        <option value="PEN" >PEN</option>
+        
+        <option value="PGK" >PGK</option>
+        
+        <option value="PHP" >PHP</option>
+        
+        <option value="PKR" >PKR</option>
+        
+        <option value="PLN" >PLN</option>
+        
+        <option value="PYG" >PYG</option>
+        
+        <option value="QAR" >QAR</option>
+        
+        <option value="RON" >RON</option>
+        
+        <option value="RSD" >RSD</option>
+        
+        <option value="RUB" >RUB</option>
+        
+        <option value="RWF" >RWF</option>
+        
+        <option value="SAR" >SAR</option>
+        
+        <option value="SBD" >SBD</option>
+        
+        <option value="SCR" >SCR</option>
+        
+        <option value="SDG" >SDG</option>
+        
+        <option value="SEK" >SEK</option>
+        
+        <option value="SGD" >SGD</option>
+        
+        <option value="SHP" >SHP</option>
+        
+        <option value="SLL" >SLL</option>
+        
+        <option value="SOS" >SOS</option>
+        
+        <option value="SRD" >SRD</option>
+        
+        <option value="STD" >STD</option>
+        
+        <option value="SVC" >SVC</option>
+        
+        <option value="SYP" >SYP</option>
+        
+        <option value="SZL" >SZL</option>
+        
+        <option value="THB" >THB</option>
+        
+        <option value="TJS" >TJS</option>
+        
+        <option value="TMT" >TMT</option>
+        
+        <option value="TND" >TND</option>
+        
+        <option value="TOP" >TOP</option>
+        
+        <option value="TRY" >TRY</option>
+        
+        <option value="TTD" >TTD</option>
+        
+        <option value="TWD" >TWD</option>
+        
+        <option value="TZS" >TZS</option>
+        
+        <option value="UAH" >UAH</option>
+        
+        <option value="UGX" >UGX</option>
+        
+        <option value="USD" >USD</option>
+        
+        <option value="UYU" >UYU</option>
+        
+        <option value="UZS" >UZS</option>
+        
+        <option value="VEF" >VEF</option>
+        
+        <option value="VND" >VND</option>
+        
+        <option value="VUV" >VUV</option>
+        
+        <option value="WST" >WST</option>
+        
+        <option value="XAF" >XAF</option>
+        
+        <option value="XAG" >XAG</option>
+        
+        <option value="XCD" >XCD</option>
+        
+        <option value="XDR" >XDR</option>
+        
+        <option value="XOF" >XOF</option>
+        
+        <option value="XPF" >XPF</option>
+        
+        <option value="YER" >YER</option>
+        
+        <option value="ZAR" >ZAR</option>
+        
+        <option value="ZMK" >ZMK</option>
+        
+        <option value="ZMW" >ZMW</option>
+        
+        <option value="ZWL" >ZWL</option>
+        
+      </select>
+    </div>
+    <div class="medium-3 columns" style="text-align: center;">
+      <span class="postfix">to</span>
+    </div>
+    <div class="medium-3 columns">
+      <select id="CURR_TO" class="postfix">
+        
+        <option value="AED" >AED</option>
+        
+        <option value="AFN" >AFN</option>
+        
+        <option value="ALL" >ALL</option>
+        
+        <option value="AMD" >AMD</option>
+        
+        <option value="ANG" >ANG</option>
+        
+        <option value="AOA" >AOA</option>
+        
+        <option value="ARS" >ARS</option>
+        
+        <option value="AUD" >AUD</option>
+        
+        <option value="AWG" >AWG</option>
+        
+        <option value="AZN" >AZN</option>
+        
+        <option value="BAM" >BAM</option>
+        
+        <option value="BBD" >BBD</option>
+        
+        <option value="BDT" >BDT</option>
+        
+        <option value="BGN" >BGN</option>
+        
+        <option value="BHD" >BHD</option>
+        
+        <option value="BIF" >BIF</option>
+        
+        <option value="BMD" >BMD</option>
+        
+        <option value="BND" >BND</option>
+        
+        <option value="BOB" >BOB</option>
+        
+        <option value="BRL" >BRL</option>
+        
+        <option value="BSD" >BSD</option>
+        
+        <option value="BTC" >BTC</option>
+        
+        <option value="BTN" >BTN</option>
+        
+        <option value="BWP" >BWP</option>
+        
+        <option value="BYN" >BYN</option>
+        
+        <option value="BYR" >BYR</option>
+        
+        <option value="BZD" >BZD</option>
+        
+        <option value="CAD" >CAD</option>
+        
+        <option value="CDF" >CDF</option>
+        
+        <option value="CHF" >CHF</option>
+        
+        <option value="CLF" >CLF</option>
+        
+        <option value="CLP" >CLP</option>
+        
+        <option value="CNY" >CNY</option>
+        
+        <option value="COP" >COP</option>
+        
+        <option value="CRC" >CRC</option>
+        
+        <option value="CUC" >CUC</option>
+        
+        <option value="CUP" >CUP</option>
+        
+        <option value="CVE" >CVE</option>
+        
+        <option value="CZK" >CZK</option>
+        
+        <option value="DJF" >DJF</option>
+        
+        <option value="DKK" >DKK</option>
+        
+        <option value="DOP" >DOP</option>
+        
+        <option value="DZD" >DZD</option>
+        
+        <option value="EGP" >EGP</option>
+        
+        <option value="ERN" >ERN</option>
+        
+        <option value="ETB" >ETB</option>
+        
+        <option value="EUR" >EUR</option>
+        
+        <option value="FJD" >FJD</option>
+        
+        <option value="FKP" >FKP</option>
+        
+        <option value="GBP" >GBP</option>
+        
+        <option value="GEL" >GEL</option>
+        
+        <option value="GGP" >GGP</option>
+        
+        <option value="GHS" >GHS</option>
+        
+        <option value="GIP" >GIP</option>
+        
+        <option value="GMD" >GMD</option>
+        
+        <option value="GNF" >GNF</option>
+        
+        <option value="GTQ" >GTQ</option>
+        
+        <option value="GYD" >GYD</option>
+        
+        <option value="HKD" >HKD</option>
+        
+        <option value="HNL" >HNL</option>
+        
+        <option value="HRK" >HRK</option>
+        
+        <option value="HTG" >HTG</option>
+        
+        <option value="HUF" >HUF</option>
+        
+        <option value="IDR" >IDR</option>
+        
+        <option value="ILS" >ILS</option>
+        
+        <option value="IMP" >IMP</option>
+        
+        <option value="INR" >INR</option>
+        
+        <option value="IQD" >IQD</option>
+        
+        <option value="IRR" >IRR</option>
+        
+        <option value="ISK" >ISK</option>
+        
+        <option value="JEP" >JEP</option>
+        
+        <option value="JMD" >JMD</option>
+        
+        <option value="JOD" >JOD</option>
+        
+        <option value="JPY" >JPY</option>
+        
+        <option value="KES" >KES</option>
+        
+        <option value="KGS" >KGS</option>
+        
+        <option value="KHR" >KHR</option>
+        
+        <option value="KMF" >KMF</option>
+        
+        <option value="KPW" >KPW</option>
+        
+        <option value="KRW" >KRW</option>
+        
+        <option value="KWD" >KWD</option>
+        
+        <option value="KYD" >KYD</option>
+        
+        <option value="KZT" >KZT</option>
+        
+        <option value="LAK" >LAK</option>
+        
+        <option value="LBP" >LBP</option>
+        
+        <option value="LKR" >LKR</option>
+        
+        <option value="LRD" >LRD</option>
+        
+        <option value="LSL" >LSL</option>
+        
+        <option value="LVL" >LVL</option>
+        
+        <option value="LYD" >LYD</option>
+        
+        <option value="MAD" >MAD</option>
+        
+        <option value="MDL" >MDL</option>
+        
+        <option value="MGA" >MGA</option>
+        
+        <option value="MKD" >MKD</option>
+        
+        <option value="MMK" >MMK</option>
+        
+        <option value="MNT" >MNT</option>
+        
+        <option value="MOP" >MOP</option>
+        
+        <option value="MRO" >MRO</option>
+        
+        <option value="MUR" >MUR</option>
+        
+        <option value="MVR" >MVR</option>
+        
+        <option value="MWK" >MWK</option>
+        
+        <option value="MXN" >MXN</option>
+        
+        <option value="MYR" >MYR</option>
+        
+        <option value="MZN" >MZN</option>
+        
+        <option value="NAD" >NAD</option>
+        
+        <option value="NGN" >NGN</option>
+        
+        <option value="NIO" >NIO</option>
+        
+        <option value="NOK" >NOK</option>
+        
+        <option value="NPR" >NPR</option>
+        
+        <option value="NZD" >NZD</option>
+        
+        <option value="OMR" >OMR</option>
+        
+        <option value="PAB" >PAB</option>
+        
+        <option value="PEN" >PEN</option>
+        
+        <option value="PGK" >PGK</option>
+        
+        <option value="PHP" >PHP</option>
+        
+        <option value="PKR" >PKR</option>
+        
+        <option value="PLN" >PLN</option>
+        
+        <option value="PYG" >PYG</option>
+        
+        <option value="QAR" >QAR</option>
+        
+        <option value="RON" >RON</option>
+        
+        <option value="RSD" >RSD</option>
+        
+        <option value="RUB" >RUB</option>
+        
+        <option value="RWF" >RWF</option>
+        
+        <option value="SAR" >SAR</option>
+        
+        <option value="SBD" >SBD</option>
+        
+        <option value="SCR" >SCR</option>
+        
+        <option value="SDG" >SDG</option>
+        
+        <option value="SEK" >SEK</option>
+        
+        <option value="SGD" >SGD</option>
+        
+        <option value="SHP" >SHP</option>
+        
+        <option value="SLL" >SLL</option>
+        
+        <option value="SOS" >SOS</option>
+        
+        <option value="SRD" >SRD</option>
+        
+        <option value="STD" >STD</option>
+        
+        <option value="SVC" >SVC</option>
+        
+        <option value="SYP" >SYP</option>
+        
+        <option value="SZL" >SZL</option>
+        
+        <option value="THB" >THB</option>
+        
+        <option value="TJS" >TJS</option>
+        
+        <option value="TMT" >TMT</option>
+        
+        <option value="TND" >TND</option>
+        
+        <option value="TOP" >TOP</option>
+        
+        <option value="TRY" >TRY</option>
+        
+        <option value="TTD" >TTD</option>
+        
+        <option value="TWD" >TWD</option>
+        
+        <option value="TZS" >TZS</option>
+        
+        <option value="UAH" >UAH</option>
+        
+        <option value="UGX" >UGX</option>
+        
+        <option value="USD" selected>USD</option>
+        
+        <option value="UYU" >UYU</option>
+        
+        <option value="UZS" >UZS</option>
+        
+        <option value="VEF" >VEF</option>
+        
+        <option value="VND" >VND</option>
+        
+        <option value="VUV" >VUV</option>
+        
+        <option value="WST" >WST</option>
+        
+        <option value="XAF" >XAF</option>
+        
+        <option value="XAG" >XAG</option>
+        
+        <option value="XCD" >XCD</option>
+        
+        <option value="XDR" >XDR</option>
+        
+        <option value="XOF" >XOF</option>
+        
+        <option value="XPF" >XPF</option>
+        
+        <option value="YER" >YER</option>
+        
+        <option value="ZAR" >ZAR</option>
+        
+        <option value="ZMK" >ZMK</option>
+        
+        <option value="ZMW" >ZMW</option>
+        
+        <option value="ZWL" >ZWL</option>
+        
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="medium-3 columns">
+<button onclick="getCurrencyUsingJQuery()" class="button postfix">Convert</button>
+</div>
+
+<div class="medium-3 columns">
+<input type="text" id="CURR_VAL" readonly placeholder="Press Convert button" style="background-color: #eee; font-weight: bold;" />
+</div>
+
+</div>
+<main>
+<section>
+
+<div class="container header-wrapper-divider"><hr></div> </div>
+							<table border="1">
+							<thead>
+							<tr class="row-1 odd">
+							<th>No</th>
+							<th class="column-1">DESCRIPTION</th><th class="column-2">PRICE($HKD) </th><th class="column-3">Favorite</th>
+							</tr>
+							</thead>
+							<tbody class="row-hover">
+
+<tr class="row-1 even">
+<td>1</td>
+<td class="column-1">Intel Core i9-10900 processor (20M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3060</td>
+	<td>	<input id="cpu1" type="checkbox" >	</td>
+</tr>
+<tr class="row-2 odd">
+<td>2</td>
+<td class="column-1">Intel Core i9-10900X processor (19.25M Cache up to 4.70GHz FCLGA2066)</td><td class="column-2">5047</td>
+	<td>	<input id="cpu2" type="checkbox" >	</td>
+</tr>
+<tr class="row-3 even">
+<td>3</td>
+<td class="column-1">Intel Core i9-10920X processor (19.25M Cache up to 4.80GHz FCLGA2066))</td><td class="column-2">5760</td>
+	<td>	<input id="cpu3" type="checkbox" >	</td>
+</tr>
+<tr class="row-4 odd">
+<td>4</td>
+<td class="column-1">Intel Core i9-10940X processor (19.25M Cache up to 4.80GHz FCLGA2066)</td><td class="column-2">6919</td>
+	<td>	<input id="cpu4" type="checkbox" >	</td>
+</tr>
+<tr class="row-5 even">
+<td>5</td>
+<td class="column-1">Intel Core i9-11900F processor (16M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3400</td>
+	<td>	<input id="cpu5" type="checkbox" >	</td>
+</tr>
+<tr class="row-6 odd">
+<td>6</td>
+<td class="column-1">Intel Core i9-11900KF processor (16M Cache up to 5.3GHz FCLGA1200)</td><td class="column-2">5828</td>
+	<td>	<input id="cpu6" type="checkbox" >	</td>
+</tr>
+<tr class="row-7 even">
+<td>7</td>
+<td class="column-1">Intel Core i9-11900K processor (16M Cache up to 5.3GHz FCLGA1200)</td><td class="column-2">4490</td>
+	<td>	<input id="cpu7" type="checkbox" >	</td>
+</tr>
+<tr class="row-8 odd">
+<td>8</td>
+<td class="column-1">Intel Core i9-11900 processor (16M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3520</td>
+	<td>	<input id="cpu8" type="checkbox" >	</td>
+</tr>
+<tr class="row-9 even">
+<td>9</td>
+<td class="column-1">Intel Core i9-9820X processor (16.5M Cache up to 4.20GHz FCLGA2066)</td><td class="column-2">6590</td>
+	<td>	<input id="cpu9" type="checkbox" >	</td>
+</tr>
+<tr class="row-10 odd">
+<td>10</td>
+<td class="column-1">Intel Core i9-9900KF processor (16M Cache up to 5.0GHz FCLGA1151)</td><td class="column-2">2990</td>
+	<td>	<input id="cpu10" type="checkbox" >	</td>
+</tr>
+<tr class="row-11 even">
+<td>11</td>
+<td class="column-1">Intel Core i9-9900K processor (16M Cache up to 5.0GHz FCLGA1151)</td><td class="column-2">3130</td>
+	<td>	<input id="cpu11" type="checkbox" >	</td>
+</tr>
+<tr class="row-12 odd">
+<td>12</td>
+<td class="column-1">Intel Core i9-9900X processor (19.25M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">7199</td>
+	<td>	<input id="cpu12" type="checkbox" >	</td>
+</tr>
+<tr class="row-13 even">
+<td>13</td>
+<td class="column-1">Intel Core i9-9940X processor (19.25M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">11599</td>
+	<td>	<input id="cpu13" type="checkbox" >	</td>
+</tr>
+<tr class="row-14 odd">
+<td>14</td>
+<td class="column-1">Intel Core i9-9980XE processor (24.75M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">14980</td>
+	<td>	<input id="cpu14" type="checkbox" >	</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div > <button id="saveFavBTN" onclick="saveFav1()"> Save to my Favourite List
+ </button> </div>
+
+
+</section>
+</main>
+</header>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+
+	/*function myFunction(n) {
+	  // Get the checkbox
+	  var checkBox = document.getElementById("cpu"+n);
+	  // Get the output text
+	  var text = document.getElementById("text");
+
+	  // If the checkbox is checked, display the output text
+	  if (checkBox.checked == true){
+		text.style.display = "block";
+	  } else {
+		text.style.display = "none";
+	  }
+	};
+	*/
+
+	function saveFav1(){
+		var string1 ="";
+		for (let i = 1 ; i < 15; i++){
+		//var i = 1;
+			var checkBox = document.getElementById("cpu"+i);
+			if (checkBox.checked == true){
+				var temp = "cpu"+i+"=Yes&" ;
+				string1 += temp;
+			}else{
+				var temp = "cpu"+i+"=No&" ;
+				string1 += temp;
+			}
+		}
+
+		//document.getElementById("saveText").innerHTML = string1;
+		//string1
+
+		//var username =	"123@123";
+		var username = localStorage.getItem("loginid");
+		var mydata ="login="+username+"&"+string1;
+		$.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:9999/save_fav',
+			dataType:"text",
+			data:mydata,
+            success: function(data) {
+			//alert(data+" Successful");
+				if(data=="Saved!"){
+					alert(data);
+					//localStorage.setItem("loginid", username);
+					//localStorage.setItem("loginstatus", "OK");
+					//location.href="http://127.0.0.1:9999/login";
+
+				}else{
+					alert("failed");
+				}
+
+            },
+            error: function(xhr, status, error) {
+                console.log('Error: ' + error.message);
+            }
+
+			//window.location.href="/login";
+
+        });
+
+
+	}
+
+	function saveFav(n){
+		var checkBox = document.getElementById("cpu"+n);
+		if (checkBox.checked == true){
+
+		//var username =	"123@123"; //Get from local data !!!!!!!!!!!!!!!!!!!!
+		var username =	localStorage.getItem("loginid");
+		var fav = n+"true";
+		//var mydata ="login="+username+"&password="+passwd;
+		var mydata ="login="+username+"&cpu"+n+"="	+fav    +"&number="+n;
+
+		alert(mydata);//show id and pw
+		//alert("Success!");
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:9999/save_fav',
+			dataType:"text",
+			data:mydata,
+            success: function(data) {
+			alert(data+" Successful");
+				if(data=="Saved!"){
+					alert(data);
+					//localStorage.setItem("loginid", username);
+					//localStorage.setItem("loginstatus", "OK");
+					//location.href="http://127.0.0.1:9999/login";
+
+				}else{
+					alert("failed");
+				}
+
+            },
+            error: function(xhr, status, error) {
+                console.log('Error: ' + error.message);
+            }
+
+			//window.location.href="/login";
+
+        });
+
+		} else {
+			alert("unchecked");
+		}
+
+	}
+
+</script>
+<script>
+var addthis_share = {
+    url: "https://free.currencyconverterapi.com"
+}
+
+function getCurrencyUsingJQuery() {
+
+  var currVal = $("#CURR_VAL");
+  currVal.val("");
+
+  var currFrSelect = $("#CURR_FR");
+  var fr = currFrSelect.val();
+
+  var currToSelect = $("#CURR_TO");
+  var to = currToSelect.val();
+
+
+  var currId = fr + "_" + to;
+  var protocol = window.location.protocol.replace(/:/g,'');
+//alert(currId);
+  currVal.attr("placeholder", "Converting...");
+  //$.getJSON("https://free.currconv.com/api/v7/convert?q=" + currId + "&compact=y&apiKey=22838461c729377904fc&callback=?",
+  $.getJSON("https://free.currconv.com/api/v7/convert?q=" + currId + "&compact=ultra&apiKey=22838461c729377904fc",
+    function(data){
+      try {
+       var currFrVal = parseFloat(document.getElementById("CURR_FR_VAL").value);
+       //currVal.val(numeral(currFrVal * data[currId]).format("0,0.00[0]"))
+		currVal.val(currFrVal * data[currId]);
+     } catch (e) {
+      alert("Please enter a number in the Amount field.");
+    }
+
+    currVal.attr("placeholder", "Press Convert button");
+
+  });
+
+}
+
+
+</script>
+
+<script>
+
+if(localStorage.getItem("loginstatus") == "OK"){
+	document.getElementById("userLogout").innerHTML = "HI: "+localStorage.getItem("loginid");
+	var row = document.getElementById("userLogin");
+	row.style.display = "none";
+	}
+else{
+	var row = document.getElementById("userLogout");
+	row.style.display = "none";
+	document.getElementById("logoutBTN").style.display = "none";
+	document.getElementById("myFav").style.display = "none";
+	document.getElementById("saveFavBTN").style.display = "none";
+	}
+function Logout(){
+	localStorage.setItem("loginstatus", "logout");
+	location.href="/index";
+}
+
+</script>
+
+</html>

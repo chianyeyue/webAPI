@@ -1,0 +1,359 @@
+<html>
+<head>
+<title></title>
+<!-- Apply styles to html elements -->
+<style>
+*{
+margin:0; padding:0; boxsizing:border-box;
+}
+header{
+width: 100%; height: 100vh;
+background-color: white;
+background-repeat: no-repeat;
+background-size: cover;
+}
+nav{
+width: 100%; height: 15vh;
+background: black;
+display: flex; justify-content: space-between;
+align-items: center;
+}
+nav .mainmenu{
+color: white;
+width: 40%;
+display: flex; justify-content: space-around;
+}
+main{
+width: 100%; height: 85vh;
+display: flex; justify-content: center;
+align-items: center;
+text-align: center;
+}
+section h3{
+letter-spacing: 3px; font-weight: 200;
+}
+section h1{
+text-transform: uppercase;
+}
+section div{
+animation:changeborder 10s infinite linear;
+border: 7px solid red;
+}
+@keyframes changeborder{
+0%
+20%
+40%
+}
+</style>
+</head>
+<body onload="loadData()">
+<!--Let us create a simple menu using the navigation tags-->
+<!--Use header to indicate that manu will be a part of header -->
+<header>
+<nav>
+<div class = "logo"> <a href="/index" style="color:white;font-size:30px;">Computer Shop</a></div>
+<!--Lets define the menu items now-->
+<div class = "mainmenu">
+<a >Home</a>
+<a >About Us</a>
+<a >Contact Us</a>
+<a id="userLogin" class="userLogin" href="/login">Login</a>
+<a id="userLogout" class="userLogout">username</a>
+<a id="myFav" class="myFav" href="/myFavourList">Favourite List</a>
+<button id="logoutBTN" onclick="Logout()">Logout</button>
+</div>
+</nav>
+<!--Let us create the main section now, if you are not using html5, use div tags-->
+<main>
+<section>
+
+<div class="container header-wrapper-divider"><hr></div> </div>
+							<table border="1">
+							<thead>
+							<tr class="row-1 odd">
+							<th>No</th>
+							<th class="column-1">DESCRIPTION</th><th class="column-2">PRICE </th><th class="column-3">Favorite</th>
+							</tr>
+							</thead>
+							<tbody class="row-hover">
+
+<tr class="row-1 even" id="row1">
+<td>1</td>
+<td class="column-1">Intel Core i9-10900 processor (20M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3060</td>
+	<td>	<input id="cpu1" type="checkbox" >	</td>
+</tr>
+<tr class="row-2 odd" id="row2">
+<td>2</td>
+<td class="column-1">Intel Core i9-10900X processor (19.25M Cache up to 4.70GHz FCLGA2066)</td><td class="column-2">5047</td>
+	<td>	<input id="cpu2" type="checkbox" >	</td>
+</tr>
+<tr class="row-3 even" id="row3">
+<td>3</td>
+<td class="column-1">Intel Core i9-10920X processor (19.25M Cache up to 4.80GHz FCLGA2066))</td><td class="column-2">5760</td>
+	<td>	<input id="cpu3" type="checkbox" >	</td>
+</tr>
+<tr class="row-4 odd" id="row4">
+<td>4</td>
+<td class="column-1">Intel Core i9-10940X processor (19.25M Cache up to 4.80GHz FCLGA2066)</td><td class="column-2">6919</td>
+	<td>	<input id="cpu4" type="checkbox" >	</td>
+</tr>
+<tr class="row-5 even" id="row5">
+<td>5</td>
+<td class="column-1">Intel Core i9-11900F processor (16M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3400</td>
+	<td>	<input id="cpu5" type="checkbox" >	</td>
+</tr>
+<tr class="row-6 odd" id="row6">
+<td>6</td>
+<td class="column-1">Intel Core i9-11900KF processor (16M Cache up to 5.3GHz FCLGA1200)</td><td class="column-2">5828</td>
+	<td>	<input id="cpu6" type="checkbox" >	</td>
+</tr>
+<tr class="row-7 even" id="row7">
+<td>7</td>
+<td class="column-1">Intel Core i9-11900K processor (16M Cache up to 5.3GHz FCLGA1200)</td><td class="column-2">4490</td>
+	<td>	<input id="cpu7" type="checkbox" >	</td>
+</tr>
+<tr class="row-8 odd" id="row8">
+<td>8</td>
+<td class="column-1">Intel Core i9-11900 processor (16M Cache up to 5.2GHz FCLGA1200)</td><td class="column-2">3520</td>
+	<td>	<input id="cpu8" type="checkbox" >	</td>
+</tr>
+<tr class="row-9 even" id="row9">
+<td>9</td>
+<td class="column-1">Intel Core i9-9820X processor (16.5M Cache up to 4.20GHz FCLGA2066)</td><td class="column-2">6590</td>
+	<td>	<input id="cpu9" type="checkbox" >	</td>
+</tr>
+<tr class="row-10 odd" id="row10">
+<td>10</td>
+<td class="column-1">Intel Core i9-9900KF processor (16M Cache up to 5.0GHz FCLGA1151)</td><td class="column-2">2990</td>
+	<td>	<input id="cpu10" type="checkbox" >	</td>
+</tr>
+<tr class="row-11 even" id="row11">
+<td>11</td>
+<td class="column-1">Intel Core i9-9900K processor (16M Cache up to 5.0GHz FCLGA1151)</td><td class="column-2">3130</td>
+	<td>	<input id="cpu11" type="checkbox" >	</td>
+</tr>
+<tr class="row-12 odd" id="row12">
+<td>12</td>
+<td class="column-1">Intel Core i9-9900X processor (19.25M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">7199</td>
+	<td>	<input id="cpu12" type="checkbox" >	</td>
+</tr>
+<tr class="row-13 even" id="row13">
+<td>13</td>
+<td class="column-1">Intel Core i9-9940X processor (19.25M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">11599</td>
+	<td>	<input id="cpu13" type="checkbox" >	</td>
+</tr>
+<tr class="row-14 odd" id="row14">
+<td>14</td>
+<td class="column-1">Intel Core i9-9980XE processor (24.75M Cache up to 4.50GHz FCLGA2066)</td><td class="column-2">14980</td>
+	<td>	<input id="cpu14" type="checkbox" >	</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div > <button onclick="deleteFav()">Delete</button> <!--button onclick="loadData()">Load</button--></div>
+
+
+</section>
+</main>
+</header>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+	function loadData(){
+		//var username =$("#username").val();
+		//var passwd =$("#password").val();
+		//var mydata ="login="+username+"&password="+passwd;
+		//var username =	"123@123";
+		var username =	localStorage.getItem("loginid")
+		var mydata ="login="+username;
+		//alert(mydata);
+        $.ajax({
+            type: 'POST',
+			url: 'http://127.0.0.1:9999/load_fav',
+			dataType:"text",
+			data:mydata,
+            success: function(data) {
+			//alert(data);
+				if(data === "[]"){
+					alert("Input Data Wrong!!!");
+				}else{
+					var nData =JSON.parse(data);
+					/*if(nData[0].password === passwd ){
+						alert("Login success");
+						alert(nData[0].password + "Login success" + nData[0].login);
+						localStorage.setItem("loginid", username);
+						localStorage.setItem("loginstatus", "OK");
+						//location.href="http://127.0.0.1:9999/index";
+						location.href="/index";
+						
+					}*/
+					/*for (let i = 1 ; i < 15; i++){
+						var cpu+i = nData[0].cpu1
+						
+						if (nData[0].cpu+i == "No"){
+							var row = document.getElementById("row"+i);
+							row.style.display = "none";
+						}
+					}*/
+					if (nData[0].cpu1 == "No"){
+							document.getElementById("cpu1").checked = true;
+							var row = document.getElementById("row"+"1");
+							row.style.display = "none";
+					}
+					if (nData[0].cpu2 == "No"){
+							var row = document.getElementById("row2");
+							row.style.display = "none";
+							document.getElementById("cpu2").checked = true;
+					}
+					if (nData[0].cpu3 == "No"){
+							var row = document.getElementById("row3");
+							row.style.display = "none";
+							document.getElementById("cpu3").checked = true;
+					}
+					if (nData[0].cpu4 == "No"){
+							var row = document.getElementById("row4");
+							row.style.display = "none";
+							document.getElementById("cpu4").checked = true;
+					}
+					if (nData[0].cpu5 == "No"){
+							var row = document.getElementById("row5");
+							row.style.display = "none";
+							document.getElementById("cpu5").checked = true;
+					}
+					if (nData[0].cpu6 == "No"){
+							var row = document.getElementById("row6");
+							row.style.display = "none";
+							document.getElementById("cpu6").checked = true;
+					}
+					if (nData[0].cpu7 == "No"){
+							var row = document.getElementById("row7");
+							row.style.display = "none";
+							document.getElementById("cpu7").checked = true;
+					}
+					if (nData[0].cpu8 == "No"){
+							var row = document.getElementById("row8");
+							row.style.display = "none";
+							document.getElementById("cpu8").checked = true;
+					}
+					if (nData[0].cpu9 == "No"){
+							var row = document.getElementById("row9");
+							row.style.display = "none";
+							document.getElementById("cpu9").checked = true;
+					}
+					if (nData[0].cpu10 == "No"){
+							var row = document.getElementById("row10");
+							row.style.display = "none";
+							document.getElementById("cpu10").checked = true;
+					}
+					if (nData[0].cpu11 == "No"){
+							var row = document.getElementById("row11");
+							row.style.display = "none";
+							document.getElementById("cpu11").checked = true;
+					}
+					if (nData[0].cpu12 == "No"){
+							var row = document.getElementById("row12");
+							row.style.display = "none";
+							document.getElementById("cpu12").checked = true;
+					}
+					if (nData[0].cpu13 == "No"){
+							var row = document.getElementById("row13");
+							row.style.display = "none";
+							document.getElementById("cpu13").checked = true;
+					}
+					if (nData[0].cpu14 == "No"){
+							var row = document.getElementById("row14");
+							row.style.display = "none";
+							document.getElementById("cpu14").checked = true;
+					}
+					//alert(nData[0].cpu1);
+				}
+				
+            },
+            error: function(xhr, status, error) {
+                console.log('Error: ' + error.message);
+            }
+        });
+	}
+
+
+
+	function deleteFav(){
+		var string1 ="";
+		for (let i = 1 ; i < 15; i++){
+			var checkBox = document.getElementById("cpu"+i);
+			if (checkBox.checked == true){
+				var temp = "cpu"+i+"=No&" ;
+				
+				var row = document.getElementById("row"+i);
+				row.style.display = "none";
+				
+				string1 += temp;
+			}else{
+				var temp = "cpu"+i+"=Yes&" ;
+				string1 += temp;
+			}
+		}
+
+		//document.getElementById("saveText").innerHTML = string1;
+		//string1
+
+		//var username =	"123@123";
+		var username = localStorage.getItem("loginid");
+		var mydata ="login="+username+"&"+string1;
+		$.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:9999/save_fav',
+			dataType:"text",
+			data:mydata,
+            success: function(data) {
+			//alert(data+" Successful");
+				if(data=="Saved!"){
+					alert(data);
+					//localStorage.setItem("loginid", username);
+					//localStorage.setItem("loginstatus", "OK");
+					//location.href="http://127.0.0.1:9999/login";
+
+				}else{
+					alert("failed");
+				}
+
+            },
+            error: function(xhr, status, error) {
+                console.log('Error: ' + error.message);
+            }
+
+			//window.location.href="/login";
+
+        });
+
+
+	}
+
+</script>
+
+<script>
+
+if(localStorage.getItem("loginstatus") == "OK"){
+	document.getElementById("userLogout").innerHTML = "HI: "+localStorage.getItem("loginid");
+	var row = document.getElementById("userLogin");
+	row.style.display = "none";
+	}
+else{
+	var row = document.getElementById("userLogout");
+	row.style.display = "none";
+	document.getElementById("logoutBTN").style.display = "none";
+	document.getElementById("myFav").style.display = "none";
+	}
+function Logout(){
+	localStorage.setItem("loginstatus", "logout");
+	location.href="/index";
+}
+
+</script>
+
+
+</html>

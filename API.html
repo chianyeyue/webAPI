@@ -1,0 +1,253 @@
+<html>
+    
+
+<style>
+#login {
+    width: 550px;
+    height: 330px;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    position: relative;
+    background: #fff url(data:image/png;base64,iVBORw0K[...]CYII=);
+    border: 1px solid #ccc;
+    border-radius: 3px;  
+}
+
+#login::before, 
+#login::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+    right: 2px;
+    top: 0;
+    z-index: -1;
+    background: #fff;
+    border: 1px solid #ccc;         
+}
+
+#login::after {
+    left: 4px;
+    right: 4px;
+    bottom: -5px;
+    z-index: -2;
+    box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+}
+#login h1 {
+    position: relative;
+    font: italic 1em/3.5em 'trebuchet MS',Arial, Helvetica;
+    color: #999;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+#login h1::before,
+#login h1::after{
+    content:'';
+    position: absolute;
+    border: 1px solid rgba(0,0,0,.15);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+#login h1::after{
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+}
+::-webkit-input-placeholder {
+   color: #bbb;
+}
+
+:-moz-placeholder {
+   color: #bbb;
+}                       
+
+.placeholder{
+    color: #bbb; /* polyfill */
+}       
+
+#login input{
+    margin: 5px 0;
+    padding: 15px;
+    width: 100%;
+    *width: 518px; /* IE7 and below */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px; 
+}
+
+#login input:focus{
+        outline: 0;
+        border-color: #aaa;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+}       
+
+#login button{
+    margin: 20px 0 0 0;
+    padding: 15px 8px;          
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #2493FF;
+    overflow: visible;
+    display: inline-block;
+    color: #fff;
+    font: bold 1.4em arial, helvetica;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4);         
+    background-color: #2493ff;
+    background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0)); 
+    transition: background-color .2s ease-out;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+                0 1px 0 rgba(255, 255, 255, .5) inset;                               
+}
+
+#login button:hover{
+    background-color: #7cbfff;
+        border-color: #7cbfff;
+}
+
+#login button:active{
+    position: relative;
+    top: 3px;
+    text-shadow: none;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+}
+
+</style
+
+    
+    <body>
+        
+        
+    <button id="api1">API!</button>
+	<div id="apiResult"> text</div>
+	
+    
+    </body>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  /*$("#login1").click(function(){
+	$("#username").val();
+	alert($("#username").val());
+   });*/
+   
+  $("#login1").click(function() {
+	
+		if ($("#username").val()=="" || $("#password").val()=="") {
+			alert('LoginID & Password cannot Null!');
+			return false;
+		}
+	
+	
+		var username =$("#username").val();
+		var passwd =$("#password").val();
+		var mydata ="login="+username+"&password="+passwd;
+		alert(mydata);
+        $.ajax({
+            type: 'POST',
+			url: 'http://127.0.0.1:9999/check_login',
+			dataType:"text",
+			data:mydata,
+            success: function(data) {
+			//alert(data);
+				/*if(data){
+				var nData =JSON.parse(data);
+					//alert(nData[0].login);
+					//alert(passwd);
+				//if(nData[0].password === passwd ){
+					localStorage.setItem("loginid", username);
+					localStorage.setItem("loginstatus", "OK");
+					//location.href="http://127.0.0.1:9999/index";
+					
+				}else{
+					//alert(data);
+					alert("Input Data Wrong!!!");
+				}*/
+				
+				/*if(data){
+				var nData =JSON.parse(data);
+				if(nData[0].password === passwd ){
+					alert("Login success");
+					localStorage.setItem("loginid", username);
+					localStorage.setItem("loginstatus", "OK");
+					//location.href="http://127.0.0.1:9999/index";
+					
+				}else{
+					//alert(data);
+					alert("Input Data Wrong!!!");
+				}
+				}*/
+				if(data === "[]"){
+					alert("Input Data Wrong!!!");
+				}else{
+					var nData =JSON.parse(data);
+					if(nData[0].password === passwd ){
+						alert("Login success");
+						alert(nData[0].password + "Login success" + nData[0].login);
+						localStorage.setItem("loginid", username);
+						localStorage.setItem("loginstatus", "OK");
+						//location.href="http://127.0.0.1:9999/index";
+						location.href="/index";
+						
+					}
+				}
+				
+            },
+            error: function(xhr, status, error) {
+                console.log('Error: ' + error.message);
+            }
+        });
+		
+		
+		
+		
+    });
+	
+	});
+	$(document).ready(function(){
+	
+	  //$("#api1").click(function() {
+		 $.ajax({
+            type: "GET",
+			url: "https://api.covid19api.com/summary",
+			//url: "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=tc",
+			
+			dataType:"json",
+			//data:mydata,
+            success: function(result, status, xhr) {
+			alert(result.Countries.length);
+			
+		$("#apiResult").html(result.Global.Newconfirmed);
+		for(i=0; i<result.Countries.length ; i++){
+			$("#apiResult").append(result.Countries[i].Country);
+			$("#apiResult").append("</br>");
+		}
+			
+			},
+			error: function(result, status, xhr) {
+				alert("Result: "+ status+" "+error+" "+ xhr.status+" "+xhr.statusText)
+			}
+			
+			});
+	
+	
+//});
+
+		
+		
+		
+		
+    });
+
+    
+    
+</script>
+
+</html>

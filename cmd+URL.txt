@@ -1,0 +1,19 @@
+node server.js
+
+http://127.0.0.1:9999/apple
+
+
+
+https://startbootstrap.com/themes
+
+(install mongo moudule)
+npm -g install mongodb
+npm install mongodb
+
+mongo
+
+show dbs
+
+
+http://127.0.0.1:9999/index
+
